@@ -1,0 +1,5 @@
+Changes in Version 8.0-0
+
+  o New package pwt8 for PWT 8.x. So far only PWT 8.0 has
+    been released (in July 2013) and has been added as
+    pwt8.0.
