@@ -14,26 +14,26 @@ citEntry(entry = "Manual",
          textVersion = 
          paste("Achim Zeileis",
                sprintf("(%s).", year),
-               "pwt8: Penn World Table (Version 8.0).",
+               "pwt8: Penn World Table (Version 8.x).",
 	       paste(note, ".", sep = ""),
 	       "URL http://CRAN.R-project.org/package=pwt8."),
 	 header = "To cite pwt8, the R package, please use:"
 )
 
-citEntry(entry = "Manual",
+citEntry(entry = "Article",
          title = "The Next Generation of the Penn World Table",
          author = personList(as.person("Robert C. Feenstra"),
 	                     as.person("Robert Inklaar"), 
 	                     as.person("Marcel P. Timmer")),
-         year         = "2013",
-	 month        = "July",
-	 organization = "Groningen Growth and Development Centre",
+         year         = "2015",
+	 journal      = "American Economic Review",
+	 note         = "Forthcoming",
          url          = "http://www.ggdc.net/pwt/",
          
          textVersion = 
-         paste("Robert C. Feenstra, Robert Inklaar, Marcel P. Timmer (2013).", 
+         paste("Robert C. Feenstra, Robert Inklaar, Marcel P. Timmer (2015).", 
                "The Next Generation of the Penn World Table.",
-               "Groningen Growth and Development Centre.",
+               "American Economic Review, Forthcoming.",
                "URL http://www.ggdc.net/pwt/."),
-	 header = "To cite the Penn World Table (version 8.0), please use:"
+	 header = "To cite the Penn World Table (version 8.x), please use:"
 )

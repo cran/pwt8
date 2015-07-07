@@ -1,13 +1,13 @@
-\name{pwt8.0}
-\alias{pwt8.0}
-\title{Penn World Table 8.0}
+\name{pwt8.1}
+\alias{pwt8.1}
+\title{Penn World Table 8.1}
 
 \description{
   Relative levels of income, output, inputs, productivity for
   167 countries between 1950 and 2011 (base year: 2005).
 }
 
-\usage{data("pwt8.0")}
+\usage{data("pwt8.1")}
 
 \format{A data frame with 10,354 observations of 39 variables.
   \describe{
@@ -23,21 +23,32 @@
     \item{avh}{Average annual hours worked by persons engaged.}
     \item{hc}{Index of human capital per person, based on years of schooling
       (Barro and Lee 2013) and returns to education (Psacharopoulos 1994).}
+    \item{ccon}{Real consumption of households and government, at current PPPs
+      (in million 2005 USD).}
+    \item{cda}{Real domestic absorption, (real consumption plus investment),
+      at current PPPs (in million 2005 USD).}
     \item{cgdpe}{Expenditure-side real GDP at current PPPs
       (in million 2005 USD).}
     \item{cgdpo}{Output-side GDP at current PPPs (in million 2005 USD).}
     \item{ck}{Capital stock at current PPPs (in million 2005 USD).}
     \item{ctfp}{TFP level at current PPPs (USA = 1).}
+    \item{cwtfp}{Welfare-relevant TFP levels at current PPPs (USA = 1).}
     \item{rgdpna}{Real GDP at constant 2005 national prices
+      (in million 2005 USD).}
+    \item{rconna}{Real consumption at constant 2005 national prices
+      (in million 2005 USD).}
+    \item{rdana}{Real domestic absorption at constant 2005 national prices
       (in million 2005 USD).}
     \item{rkna}{Capital stock at constant 2005 national prices
       (in million 2005 USD).}
     \item{rtfpna}{TFP at constant national prices (2005 = 1).}
+    \item{rwtfpna}{Welfare-relevant TFP at constant national prices (2005 = 1).}
     \item{labsh}{Share of labour compensation in GDP at current
       national prices.}
+    \item{delta}{Average depreciation rate of the capital stock.}
     \item{xr}{Exchange rate, national currency/USD (market and estimated).}
-    \item{pl_gdpe}{Price level of CGDPe (PPP/XR,
-      price level of USA GDPo in 2005 = 1).}
+    \item{pl_con}{Price level of CCON (PPP/XR, price level of USA GDPo in 2005 = 1).}
+    \item{pl_da}{Price level of CDA (PPP/XR, price level of USA GDPo in 2005 = 1).}
     \item{pl_gdpo}{Price level of CGDPo (PPP/XR,
       price level of USA GDPo in 2005 = 1).}
     \item{i_cig}{Factor indicating whether relative price data for consumption,
@@ -73,85 +84,25 @@
 }
 
 \details{
-  The Penn World Table (version 8.0) is a database with information on
+  The Penn World Table (version 8.1) is a database with information on
   relative levels of income, output, inputs, productivity for 167 countries
-  between 1950 and 2011. For more details see the official documentation
-  provided at \url{http://www.ggdc.net/pwt/}.
-
-  Version 8.0 has been constructed by Feenstra, Inklaar, and Timmer (2013, 2015).
-  Compared to earlier versions (see Heston et al. 2012, and also R package
-  \pkg{pwt}), the construction of the data has changed somewhat and also some
-  variables have been renamed, added, or dropped. The PWT 8.0 website provides
-  many additional materials including documentation and scripts for constructing
-  customized variables.
-  
-  The data set \code{pwt8.0} provided here largely preserves the properties
-  of the original data. All character or indicator variables are stored
-  as factors, though. Also, the variables \code{isocode} (rather than
-  \code{countrycode}) and \code{currency} (rather than \code{currency_unit})
-  are used as in package \pkg{pwt}. Following Feenstra et al., the ISO
-  country code (\code{isocode}) now strictly follows ISO 3166-1 alpha-3, i.e.,
-  COD (rather than ZAR) is used for the Democratic Republic of Congo,
-  DEU (rather than GER) for Germany and ROU (rather than ROM) for Romania.
-
-  Feenstra et al provide a detailed list of overlapping variables in version
-  7.1 and 8.0. Here, only the variable names are list:
-  \tabular{ll}{
-  Version 8.0 \tab   Version 7.1\cr
-  \code{cgdpe} \tab   \code{tcgdp}\cr
-  \code{xr} \tab      \code{xrat}\cr
-  \code{pl_gdpe} \tab \code{p}\cr
-  \code{csh_c} \tab   \code{cc}\cr
-  \code{csh_i} \tab   \code{ci}\cr
-  \code{csh_g} \tab   \code{cg}\cr
-  \code{pl_c} \tab    \code{pc}\cr
-  \code{pl_i} \tab    \code{pi}\cr
-  \code{pl_g} \tab    \code{pg}\cr
-  }
-
-  Similarly, the following variables from version 7.1 can be constructed
-  (approximately) from 8.0 data:
-  \tabular{ll}{
-  Version 7.1 \tab     Link to Version 8.0?\cr
-  \code{ppp} \tab      Compute as \code{pl_gdpe * xr}\cr
-  \code{cgdp} \tab     Compute as \code{cgdpe/pop}\cr
-  \code{y} \tab        Divide \code{cgdpe} by \code{pop} and divide by USA values\cr
-  \code{rgdpch} \tab   Closest comparison: \code{rgdpe/pop}\cr
-  \code{rgdpwok} \tab  Closest comparison: \code{rgdpe/emp}\cr
-  \code{rgdpl2th} \tab Closest comparison: \code{rgdpe/(avh * emp)}\cr
-  }
+  between 1950 and 2011. For more details see Feenstra, Inklaar, and Timmer (2015ab)
+  provided at \url{http://www.ggdc.net/pwt/}. PWT 8.1 is an updated version of
+  PWT 8.0, covering the same countries and period, see also \code{\link[pwt8]{pwt8.0}}.
 }
 
 \source{
-  Penn World Table 8.0,
-  \url{http://dx.doi.org/10.15141/S5159X}.
+  Penn World Table 8.1,
+  \url{http://dx.doi.org/10.15141/S5NP4S}.
 }
 
 \references{
-Barro RJ, Lee JW (2013).
-  A New Data Set of Educational Attainment in the World, 1950--2010.
-  \emph{Journal of Development Economics},  \bold{104}, 184--198.
-  URL \url{http://dx.doi.org/10.1016/j.jdeveco.2012.10.001}
-
-Feenstra RC, Inklaar R, Timmer MP (2013).
-  PWT 8.0: A User's Guide.
-  URL \url{http://www.ggdc.net/pwt/}.
-
 Feenstra RC, Inklaar R, Timmer MP (2015).
   The Next Generation of the Penn World Table,
   \emph{American Economic Review}, forthcoming.
   URL \url{http://www.ggdc.net/pwt/}.
-
-Heston A, Summers R, Aten B (2012).
-  Penn World Table Version 7.1, Center for International
-  Comparisons of Production, Income and Prices at the University of Pennsylvania.
-  URL \url{http://pwt.sas.upenn.edu/}.
-
-Psacharopoulous G (1994).
-  Returns to Investment in Education: A Global Update.
-  \emph{World Development}, 22(9), 1325-1343.
 }
 
-\seealso{\code{\link[pwt8]{pwt8.1}}}
+\seealso{\code{\link[pwt8]{pwt8.0}}}
 
 \keyword{datasets}

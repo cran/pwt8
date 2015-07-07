@@ -1,3 +1,10 @@
+Changes in Version 8.1-0
+
+  o New package pwt8 for PWT 8.1 (originally released in
+    April 2015). It is an updated version of PWT 8.0,
+    covering the same countries and period.
+
+
 Changes in Version 8.0-0
 
   o New package pwt8 for PWT 8.x. So far only PWT 8.0 has
