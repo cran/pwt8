@@ -145,7 +145,6 @@ Feenstra RC, Inklaar R, Timmer MP (2015).
 Heston A, Summers R, Aten B (2012).
   Penn World Table Version 7.1, Center for International
   Comparisons of Production, Income and Prices at the University of Pennsylvania.
-  URL \url{http://pwt.sas.upenn.edu/}.
 
 Psacharopoulous G (1994).
   Returns to Investment in Education: A Global Update.
